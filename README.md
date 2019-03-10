@@ -1,11 +1,11 @@
 # Interview
 
-## Contents  
-  - [排序](#排序)
-  - [设计模式](#设计模式)
+## 目录  
+* [排序](#排序)
+* [设计模式](#设计模式)
 
 ## 排序
-### 1.1  [冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
+### 1.1[冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
 （无序区，有序区）。从无序区通过交换找出最大元素放到有序区前端。
 冒泡排序思路：
 1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
