@@ -1,8 +1,10 @@
-# Contents  
-- [Sort](#Sort)
+# Interview
 
+## Contents  
+- [1 排序](#2 排序)
+  - [1.1 冒泡排序](#1.1 冒泡排序)
+- [2 设计模式](#2 设计模式)
 
-# Sort
 ## 1 排序
 ### 1.1  [冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
 （无序区，有序区）。从无序区通过交换找出最大元素放到有序区前端。
@@ -85,4 +87,4 @@
 
 ### [返回目录](#Contents)
 
-# Design pattern
+## 2 设计模式
