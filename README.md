@@ -1,7 +1,8 @@
 # Interview
 
 ## Contents  
-  - [1 排序](1 排序)
+  - [1 排序](#1 排序)
+  - [设计模式](#设计模式)
 
 ## 1 排序
 ### 1.1  [冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
@@ -85,4 +86,4 @@
 
 ### [返回目录](#Contents)
 
-## 2 设计模式
+## 设计模式
