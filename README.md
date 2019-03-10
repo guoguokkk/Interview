@@ -43,14 +43,14 @@
 ### 1.6 [归并排序](https://github.com/guoguokkk/Interview/blob/master/Sort/MergeSort.cpp)
 归并排序：把数据分为两段，从两段中逐个选最小的元素移入新数据段的末尾。可从上到下或从下到上进行
 #### 1.6.1 递归
-![](https://github.com/guoguokkk/Sort/blob/master/img/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F_%E9%80%92%E5%BD%92.png)
+![](https://github.com/guoguokkk/Interview/blob/master/img/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F_%E9%80%92%E5%BD%92.png)
 
 #### 1.6.2 迭代
-![](https://github.com/guoguokkk/Sort/blob/master/img/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F_%E8%BF%AD%E4%BB%A3.png)
+![](https://github.com/guoguokkk/Interview/blob/master/img/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F_%E8%BF%AD%E4%BB%A3.png)
 
 ### 1.7 [希尔排序](https://github.com/guoguokkk/Interview/blob/master/Sort/shell_sort.cpp)
 希尔排序：每一轮按照事先决定的间隔进行插入排序，间隔会依次缩小，最后一次一定要是1
-![](https://github.com/guoguokkk/Sort/blob/master/img/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.png)
+![](https://github.com/guoguokkk/Interview/blob/master/img/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.png)
 
 ### 1.8 [计数排序](https://github.com/guoguokkk/Interview/blob/master/Sort/CountSort.cpp)
 
