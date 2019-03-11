@@ -8,6 +8,7 @@
 #include"shell_sort.h"
 #include"CountSort.h"
 #include"BucketSort.h"
+#include"RadixSort.h"
 using namespace std;
 
 int main()
@@ -39,6 +40,9 @@ int main()
 	Test_BucketSort();
 	std::cout << std::endl;
 	
+	Test_RadixSort();
+	std::cout << std::endl;
+
 	getchar();
 	return 0;
 }
