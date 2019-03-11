@@ -2,6 +2,7 @@
 
 ## 目录  
 * [排序](#排序)
+* [查找](#查找)
 * [设计模式](#设计模式)
 
 ## 排序
@@ -81,9 +82,39 @@
 4. 从不是空的桶子里把项目再放回原来的序列中。
 假设数据分布在[0，100)之间，每个桶内部用链表表示，在数据入桶的同时插入排序，然后把各个桶中的数据合并。
 
-### 1.10 基数排序
+### 1.10 [基数排序](https://github.com/guoguokkk/Interview/blob/master/Sort/RadixSort.cpp)
 基数排序：一种多关键字的排序算法，可用桶排序实现
 ![](https://github.com/guoguokkk/Interview/blob/master/img/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.jpg)
+
+### [返回目录](#目录)
+
+## 查找
+
+### 2.1 [顺序查找](https://github.com/guoguokkk/Interview/blob/master/Search/SequentialSearch.cpp)
+### 2.2 [二分查找](https://github.com/guoguokkk/Interview/blob/master/Search/BinarySearch.cpp)
+### 2.3 [插值查找](https://github.com/guoguokkk/Interview/blob/master/Search/InsertionSearch.cpp)
+- 折半查找不是自适应的（也就是说是傻瓜式的）。二分查找中查找点计算如下：
+	mid=(low+high)/2, 即mid=low+1/2*(high-low);
+- 通过类比，我们可以将查找的点改进为如下：
+	mid=low+(key-a[low])/(a[high]-a[low])*(high-low)，
+- 改进为下面的计算机方案（不知道具体过程）：mid = low + (key - a[low]) / (a[high] - a[low]) * (high - low)，也就是将上述的比例参数1/2改进了，根据关键字在整个有序表中所处的位置，让mid值的变化更靠近关键字key，这样也就间接地减少了比较次数。
+	
+1. 注：对于表长较大，而关键字分布又比较均匀的查找表来说，插值查找算法的平均性能比折半查找要好的多。反之，数组中如果分布非常不均匀，那么插值查找未必是很合适的选择。
+2. 复杂度分析：查找成功或者失败的时间复杂度均为O(log2(log2n))。
+	
+### 2.4 [斐波那契查找](https://github.com/guoguokkk/Interview/blob/master/Search/FibonacciSearch.cpp)
+![](https://github.com/guoguokkk/Interview/blob/master/img/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%9F%A5%E6%89%BE.jpg)
+
+### 2.5 [哈希查找](https://github.com/guoguokkk/Interview/blob/master/Search/HashTable.cpp)
+
+### 2.6 二叉搜索树
+在二叉搜索树b中查找x的过程为：
+1. 若b是空树，则搜索失败，否则：
+2. 若x等于b的根节点的数据域之值，则查找成功；否则：
+3. 若x小于b的根节点的数据域之值，则搜索左子树；否则：
+4. 查找右子树。 
+
+### 2.7 [红黑树](https://github.com/guoguokkk/Interview/blob/master/Search/RedBlackTree.cpp)
 
 ### [返回目录](#目录)
 
