@@ -105,7 +105,7 @@
 ### 2.4 [斐波那契查找](https://github.com/guoguokkk/Interview/blob/master/Search/FibonacciSearch.cpp)
 ![](https://github.com/guoguokkk/Interview/blob/master/img/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%9F%A5%E6%89%BE.jpg)
 
-### 2.5 [哈希查找](https://github.com/guoguokkk/Interview/blob/master/Search/HashTable.cpp)
+### 2.5 哈希查找
 
 ### 2.6 二叉搜索树
 在二叉搜索树b中查找x的过程为：
@@ -114,7 +114,7 @@
 3. 若x小于b的根节点的数据域之值，则搜索左子树；否则：
 4. 查找右子树。 
 
-### 2.7 [红黑树](https://github.com/guoguokkk/Interview/blob/master/Search/RedBlackTree.cpp)
+### 2.7 红黑树
 
 ### [返回目录](#目录)
 
