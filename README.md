@@ -1,14 +1,7 @@
 # Interview
 
-## 目录  
-* [排序](#排序)
-* [查找](#查找)
-* [设计模式](#设计模式)
-
 ## 排序
-<b><details><summary>➕ C/C++</summary></b>
-
-
+<b><details><summary>1. 排序</summary></b>
 
 ### 1.1[冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
 （无序区，有序区）。从无序区通过交换找出最大元素放到有序区前端。
@@ -91,9 +84,11 @@
 ![](https://github.com/guoguokkk/Interview/blob/master/img/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.jpg)
 
 ### [返回目录](#目录)
+</details>
 
 ## 查找
-
+<b><details><summary>2. 查找</summary></b>
+	
 ### 2.1 [顺序查找](https://github.com/guoguokkk/Interview/blob/master/Search/SequentialSearch.cpp)
 ### 2.2 [二分查找](https://github.com/guoguokkk/Interview/blob/master/Search/BinarySearch.cpp)
 ### 2.3 [插值查找](https://github.com/guoguokkk/Interview/blob/master/Search/InsertionSearch.cpp)
