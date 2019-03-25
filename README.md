@@ -1,17 +1,15 @@
 # Interview
 
-region { 这是折叠区标题的头
-这是折叠区中的文本
-这还是折叠区中的文本
-} region 这是折叠区标题的尾
-
-
 ## 目录  
 * [排序](#排序)
 * [查找](#查找)
 * [设计模式](#设计模式)
 
 ## 排序
+<b><details><summary>➕ C/C++</summary></b>
+
+
+
 ### 1.1[冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
 （无序区，有序区）。从无序区通过交换找出最大元素放到有序区前端。
 冒泡排序思路：
@@ -121,7 +119,7 @@ region { 这是折叠区标题的头
 4. 查找右子树。 
 
 ### 2.7 红黑树
-
+</details>
 ### [返回目录](#目录)
 
 ## 设计模式
