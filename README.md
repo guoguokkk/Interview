@@ -1,6 +1,5 @@
 # Interview
 
-## 排序
 <b><details><summary>1. 排序</summary></b>
 
 ### 1.1[冒泡排序](https://github.com/guoguokkk/Interview/blob/master/Sort/BubbleSort.cpp)
@@ -86,7 +85,6 @@
 ### [返回目录](#目录)
 </details>
 
-## 查找
 <b><details><summary>2. 查找</summary></b>
 	
 ### 2.1 [顺序查找](https://github.com/guoguokkk/Interview/blob/master/Search/SequentialSearch.cpp)
@@ -114,9 +112,14 @@
 4. 查找右子树。 
 
 ### 2.7 红黑树
+
+### [返回目录](#目录)
 </details>
-### [返回目录](#目录)
 
-## 设计模式
 
+<b><details><summary>4. 面试题</summary></b>
+
+
+	
 ### [返回目录](#目录)
+</details>
