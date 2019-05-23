@@ -1,56 +1,43 @@
-#include "HeapSort.h"
-#include"Tool.h"
+#include <iostream>
+#include <algorithm>
+using namespace std;
 
-//×î´ó¶Ñ£º¸ù½áµãµÄ¼üÖµÊÇËùÓĞ¶Ñ½áµã¼üÖµÖĞ×î´óÕß£¬ÇÒÃ¿¸ö½áµãµÄÖµ¶¼±ÈÆäº¢×ÓµÄÖµ´ó
-//×îĞ¡¶Ñ£º¸ù½áµãµÄ¼üÖµÊÇËùÓĞ¶Ñ½áµã¼üÖµÖĞ×îĞ¡Õß£¬ÇÒÃ¿¸ö½áµãµÄÖµ¶¼±ÈÆäº¢×ÓµÄÖµĞ¡
-void MaxHeap(int* nums, int start, int end)
-{
+// å †æ’åºï¼šï¼ˆæœ€å¤§å †ï¼Œæœ‰åºåŒºï¼‰ã€‚ä»å †é¡¶æŠŠæ ¹å¸å‡ºæ¥æ”¾åœ¨æœ‰åºåŒºä¹‹å‰ï¼Œå†æ¢å¤å †ã€‚
+
+void max_heapify(int arr[], int start, int end) {
+	//å»ºç«‹çˆ¶ç¯€é»æŒ‡æ¨™å’Œå­ç¯€é»æŒ‡æ¨™
 	int dad = start;
 	int son = dad * 2 + 1;
-	while (son < end)
-	{
-		//ÕÒµ½Á½¸ö×Ó½ÚµãÖĞ±È½Ï´óµÄ
-		if (son < end - 1 && nums[son] < nums[son + 1])
-		{
-			++son;
-		}
-
-		//Èç¹û×Ó½ÚµãÖĞ´óµÄ±È¸ù½Úµã»¹´ó£¬¾ÍĞèÒª½»»»£¬È»ºó°ÑÕâ¸öĞ¡µÄÊıÒ»Ö±ÏÂ³Á
-		if (nums[son] > nums[dad])
-		{
-			Swap(nums[dad], nums[son]);
+	while (son <= end) { //è‹¥å­ç¯€é»æŒ‡æ¨™åœ¨ç¯„åœå…§æ‰åšæ¯”è¼ƒ
+		if (son + 1 <= end && arr[son] < arr[son + 1]) //å…ˆæ¯”è¼ƒå…©å€‹å­ç¯€é»å¤§å°ï¼Œé¸æ“‡æœ€å¤§çš„
+			son++;
+		if (arr[dad] > arr[son]) //å¦‚æœçˆ¶ç¯€é»å¤§æ–¼å­ç¯€é»ä»£è¡¨èª¿æ•´å®Œç•¢ï¼Œç›´æ¥è·³å‡ºå‡½æ•¸
+			return;
+		else { //å¦å‰‡äº¤æ›çˆ¶å­å…§å®¹å†ç¹¼çºŒå­ç¯€é»å’Œå­«ç¯€é»æ¯”è¼ƒ
+			swap(arr[dad], arr[son]);
 			dad = son;
 			son = dad * 2 + 1;
 		}
-		else
-		{//±íÊ¾×ÓÊ÷ÒÑ¾­µ÷ÕûÍê±Ï
-			return;
-		}
 	}
 }
 
-// ¶ÑÅÅĞò£º£¨×î´ó¶Ñ£¬ÓĞĞòÇø£©¡£´Ó¶Ñ¶¥°Ñ¸ùĞ¶³öÀ´·ÅÔÚÓĞĞòÇøÖ®Ç°£¬ÔÙ»Ö¸´¶Ñ
-void HeapSort(int * nums, int n)
-{
-	for (int i = n / 2 - 1; i >= 0; --i)
-	{
-		MaxHeap(nums, i, n - 1);
-	}
-
-	for (int i = n - 1; i > 0; --i)
-	{
-		Swap(nums[i], nums[0]);
-		MaxHeap(nums, 0, i - 1);
+void heap_sort(int arr[], int len) {
+	//åˆå§‹åŒ–ï¼Œiå¾æœ€å¾Œä¸€å€‹çˆ¶ç¯€é»é–‹å§‹èª¿æ•´
+	for (int i = len / 2 - 1; i >= 0; i--)
+		max_heapify(arr, i, len - 1);
+	//å…ˆå°‡ç¬¬ä¸€å€‹å…ƒç´ å’Œå·²ç»æ’å¥½çš„å…ƒç´ å‰ä¸€ä½åšäº¤æ›ï¼Œå†å¾æ–°èª¿æ•´(åˆšè°ƒæ•´çš„å…ƒç´ ä¹‹å‰çš„å…ƒç´ )ï¼Œç›´åˆ°æ’åºå®Œç•¢
+	for (int i = len - 1; i > 0; i--) {
+		swap(arr[0], arr[i]);
+		max_heapify(arr, 0, i - 1);
 	}
 }
 
-void Test_HeapSort()
-{
-	int n = 8;
-	int nums[] = { 2,5,2,4,6,4,1,3 };
-	std::cout << "before sorting: ";
-	PrintArrayPoint(nums, n);
-	HeapSort(nums, n);
-	std::cout << "after HeapSort: ";
-	PrintArrayPoint(nums, n);
+int main() {
+	int arr[] = { 3, 5, 3, 0, 8, 6, 1, 5, 8, 6, 2, 4, 9, 4, 7, 0, 1, 8, 9, 7, 3, 1, 2, 5, 9, 7, 4, 0, 2, 6 };
+	int len = (int) sizeof(arr) / sizeof(*arr);
+	heap_sort(arr, len);
+	for (int i = 0; i < len; i++)
+		cout << arr[i] << ' ';
+	cout << endl;
+	return 0;
 }
